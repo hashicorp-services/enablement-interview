@@ -1,0 +1,96 @@
+/* Two-column layout */
+.left-column {
+  height: 92%;
+  width: 24.8%;
+  float: left;
+  padding-top: 1em;
+}
+.left-column h2 {
+  padding-top: 1em;
+  font-size: 1em !important;
+}
+.right-column {
+  width: 74.8%;
+  float: right;
+  padding-top: 1em;
+}
+.left-column-50 {
+  /* height: 92%; */
+  width: 49.55%;
+  float: left;
+  padding-top: 1em;
+}
+.right-column-50 {
+  width: 49.55%;
+  float: right;
+  padding-top: 1em;
+}
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+.pull-right + * {
+  clear: both;
+}
+
+table, th, tr, td, ul, ol {
+  /* padding-left: 1.5em; */
+  /* padding-right: -1em; */
+  vertical-align: top;
+  padding: .5em;
+  margin: .5em;
+  border-spacing: 10px;
+  border-width: 0px !important ;
+  /* border-color: #000000 !important ; */
+  background-color: #ffffff;
+  border-collapse: collapse !important ;
+  /* border-collapse: separate !important ; */
+}
+
+.remark-slide-content.extra-compact {
+  padding: 20px 40px 0px 40px;
+  font-size: 1.5rem;
+}
+.remark-slide-content.extra-compact h1 {
+  font-size: 2.5rem;
+}
+.remark-slide-content.extra-compact h2 {
+  font-size: 2.25rem;
+}
+.remark-slide-content.extra-compact h3 {
+  font-size: 2rem;
+}
+.remark-slide-content.extra-compact pre,
+.remark-slide-content.extra-compact code,
+.remark-slide-content.extra-compact kbd,
+.remark-slide-content.extra-compact tt,
+.remark-slide-content.extra-compact samp {
+  font-size: 1rem;
+}
+.remark-slide-content.col-3.extra-compact {
+  padding-top: 136px;
+}
+.remark-slide-content.col-3.extra-compact > h1:first-of-type {
+  top: 42px;
+  left: 40px;
+}
+/* Required for solarized-dark highlight.js theme (see remark config below) */
+/* .remark-code-line-highlighted {
+  background-color: rgba(100, 100, 140, 0.35);
+}
+.remark-code-span-highlighted {
+  background-color: rgba(100, 100, 140, 0.35);
+  padding: 1px 2px 2px 2px;
+} */
+.remark-notes-area {
+  font-family: 'Metro', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, arial, sans-serif;
+}
+.remark-notes-preview-area {
+  font-size: 0.75rem;
+}
+.remark-notes-area p { margin-bottom: 0.5rem; }
+.remark-notes-preview-area p { margin-bottom: 0.25rem; }

@@ -1,0 +1,26 @@
+.academy-body{
+  background-image: url('../../assets/images/HashiCorpEA-background-vertical.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* unvisited link */
+a:link {
+  color: black;
+  }
+
+  /* visited link */
+  a:visited {
+  color: black;
+  }
+  /* mouse over link */
+  a:hover {
+  color: grey;
+  }
+  .jumbotron {
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--bs-light);
+    border-radius: .3rem;
+    font-size: large;
+  }

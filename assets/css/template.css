@@ -1,0 +1,197 @@
+/* Hashicorp fonts */
+@font-face {
+  font-family: "Metro-Sans-Regular";
+  src: url("VTE-101/content/assets/fonts/Metro-Sans-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Metro-Sans-Bold";
+  src: url("VTE-101/content/assets/fonts/Metro-Sans-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Metro-Sans-Regular-Italic";
+  src: url("VTE-101/content/assets/fonts/Metro-Sans-Regular-Italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Metro-Sans-Bold-Italic";
+  src: url("VTE-101/content/assets/fonts/Metro-Sans-Bold-Italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilmer-Regular";
+  src: url("VTE-101/content/assets/fonts/Gilmer-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilmer-Bold";
+  src: url("VTE-101/content/assets/fonts/Gilmer-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Cloud brand colors */
+
+.bg-aws   { background: #FF9900 !important; }
+.bg-azure { background: #008AD7 !important; }
+.bg-gcp   { background: #3cba54 !important; }
+
+/* Hashicorp brand colors */
+
+.bg-vagrant    { background: #1563ff !important; }
+.bg-packer     { background: #00ACFF !important; }
+.bg-terraform  { background: #623CE4 !important; }
+.bg-vault      { background: #7C8797 !important; }
+.bg-nomad      { background: #00BC7F !important; }
+.bg-consul     { background: #CA2171 !important; }
+
+/* Title tag */
+
+.title {
+  font-size: 0.8em !important;
+  font-variant: small-caps !important;
+}
+
+/* Two col spacing tags of three sizes small med and large*/
+
+div.col-small  {
+  padding-top: 75px;
+  font-size: 0.8em !important;
+  width: 49% !important;
+}
+
+div.col-medium {
+  padding-top: 125px;
+  font-size: 0.8em !important;
+  width: 49% !important;
+ }
+
+div.col-large  {
+  padding-top: 175px;
+  font-size: 0.8em !important;
+  width: 49% !important;
+}
+
+.col-title {
+  width: 100% !important;
+  font-size: 0.8em !important;
+  font-variant: small-caps !important;
+  text-align: left;
+}
+
+/* 3 column tags */
+
+div.col-3-small  {
+  padding-top: 75px;
+  font-size: 0.9em !important;
+  width: 32% !important;
+}
+
+div.col-3-medium {
+  padding-top: 125px;
+  font-size: 0.9em !important;
+  width: 32% !important;
+ }
+
+div.col-3-large  {
+  padding-top: 175px;
+  font-size: 0.9em !important;
+  width: 32% !important;
+}
+
+/*
+ * Box with list style
+ */
+
+div.box {
+   padding-bottom: 4px;
+   padding-right: 4px;
+   padding-left: 4px;
+   padding-top: 6px;
+}
+
+div.box-title {
+     font-size: 0.5em;
+     font-weight: bold;
+     line-height: 260%;
+     letter-spacing: 0.1em;
+     font-variant: small-caps;
+     background-color: rgba(0, 0, 0, 0.1);
+}
+
+div.box-title p { line-height: 260%; }
+
+div.rounded { border-radius: 12px; }
+div.rounded div { border-top-left-radius: 12px; border-top-right-radius: 12px; }
+
+.custom-shadow {
+  box-shadow: 6px 6px 3px grey;
+}
+
+.title-box {
+  background-color: black;
+  font-size: 0.8em !important;
+  box-shadow: 6px 6px 3px grey;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.box-vault {
+  background: #7C8797;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 0.8em !important;
+  box-shadow: 6px 6px 3px grey;
+}
+
+.box-consul {
+  background: #CA2171;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 0.8em !important;
+  box-shadow: 6px 6px 3px grey;
+}
+
+.box-terraform {
+  background: #623CE4;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 0.8em !important;
+  box-shadow: 6px 6px 3px grey;
+}
+
+.box-spacing-1 #boxed-text { margin-bottom: 1em; }
+.box-spacing-2 #boxed-text { margin-bottom: 2em; }
+.box-spacing-3 #boxed-text { margin-bottom: 3em; }
+.box-spacing-4 #boxed-text { margin-bottom: 4em; }
+.box-spacing-5 #boxed-text { margin-bottom: 5em; }
+
+/* This is for table data formating */
+
+table.custom-header th {
+  font-variant: small-caps;
+  text-align: center;
+  font-weight: bold;
+}
+
+table.center-row tr {
+  text-align: center;
+}
+
+table.custom-row tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* This is for code description format. Use this when describing code blocks */
+
+.code-describe {
+  font-size: 0.8em !important;
+  text-align: center;
+  width: 32% !important;
+}

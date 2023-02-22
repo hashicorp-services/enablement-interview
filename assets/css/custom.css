@@ -1,0 +1,23 @@
+.cols {
+  display: flex;
+}
+
+.fifty {
+  flex: 50%;
+}
+
+.left-code {
+  height: 92%;
+  width: 24.8%;
+  float: left;
+  padding-top: 1em;
+}
+.left-code h2 {
+  padding-top: 1em;
+  font-size: 1em !important;
+}
+.right-code{
+  width: 74.8%;
+  float: right;
+  padding-top: 1em;
+}
