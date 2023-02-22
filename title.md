@@ -6,7 +6,7 @@ count: false
 # TITLE GOES HERE
 
 <!-- Image example -->
-![:scale 10%](https://hashicorp.github.io/field-workshops-assets/assets/logos/logo_terraform.png)
+![:scale 20%](./assets/logos/HashiCorp_Enterprise_Academy_Vertical_White_RGB.png)
 
 ???
 

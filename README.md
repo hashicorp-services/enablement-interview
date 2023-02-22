@@ -24,7 +24,7 @@ Repo to facilitate the presentation and technical exercise for the Enablement En
    - [Vault: Token Response Wrapping](https://developer.hashicorp.com/vault/docs/concepts/response-wrapping)
    - [Vault Password Policy](https://developer.hashicorp.com/vault/docs/concepts/password-policies)
 
-4. We have provided an [index.html](index.html), and 3 markdown files ([title.md](title.md), [slide1.md](slide1.md), [slide2.md](slide2.md)) These contain some examples of markdown for classes, images, presenter notes, etc. Create a presentation with 3-7 slides for the topic you chose above. Please make you have at least one example of:
+4. We have provided an [index.html](index.html), and 3 markdown files ([title.md](title.md), [slide1.md](slide1.md), [slide2.md](slide2.md).) These contain some examples of markdown for classes, images, presenter notes, etc. Create a presentation with 3-7 slides for the topic you chose above. Please make you have at least one example of:
 
    - Presenter notes
    - Images

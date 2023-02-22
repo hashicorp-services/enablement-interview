@@ -6,7 +6,7 @@ name: slide1
 
 ## Slide 1
 
-![text](./assets/images/layouts.png)
+![scale:50%](./assets/logos/logo_terraform.png)
 
 This slide uses the `img-right` class and displays an image
 
