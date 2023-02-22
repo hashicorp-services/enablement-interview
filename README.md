@@ -54,32 +54,40 @@ disable_mlock = true
 The presentation is using [remarkjs](https://remarkjs.com/) and the [story](https://github.com/xaprb/story/tree/master) template for display. Story's framework provides predefined layouts for a simple modular way to create custom presentations.
 
 Here are slide classes to choose from for different layouts:
-![](./assets/images/layouts.png)
+![layouts](./assets/images/layouts.png)
 
 You can review this [index.md](https://raw.githubusercontent.com/xaprb/story/master/exampleSite/content/slides/adirondack/index.md) for more markdown examples that are available for use.
 
-**Local Presenting**
+### Local Presenting
 
 You should be able to present the slides by spinning up a local webserver. There are several options, a few are listed below.
 
-**Live Server in VSCode**
+**Live Server in VSCode** <br>
 Download the [plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) It is a supported VSC plugin so you can run it in VSC directly.
 
 **LiveReload**
 
 `pip3 install livereload` or `brew install livereload`
 
-Navigate to the URL provided
+Run `livereload . ` in the repository directory. Navigate to the URL provided in the output
 
 Ex:
-```
-[I 230221 16:23:52 server:335] Serving on http://127.0.0.1:35729
+
+```bash
+~/enablement-interview: livereload .
+[I 230221 20:52:57 server:335] Serving on http://127.0.0.1:35729
 ````
 
-**Simple HTTP Server**
-From the command line, navigate to the repository directory:
+**Simple HTTP Server** <br>
+From the command line, navigate to the repository directory and run
+
+```bash
 python3 -m http.server 9000
+```
+
 Navigate to localhost:9000
+
+### Shortcut Keys
 
 The following Chrome commands may come in handy:
 
