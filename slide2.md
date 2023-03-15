@@ -1,19 +1,18 @@
 layout: true
-class: compact
+class: img-right
 background-image: url(../../assets/images/backgrounds/HashiCorp-Content-bkg.png)
 background-size: cover
 name: slide2
 
-## Slide 2
+---
+### Dynamic Credentials with the AWS Provider
 
-Here's an example of incremental text (hit left to progress):
+![:scale 10%](./assets/logos/logo_terraform.png)
 
-- List Item 1
---
+<font size=4>
 
-- List Item 2
---
+- Configure AWS:
+Set up a trust configuration between AWS and Terraform Cloud. Then, you must create AWS roles and policies for your Terraform Cloud workspaces.
 
-- List Item 3
-
-???
+- Configure Terraform Cloud:
+ Add environment variables to the Terraform Cloud workspaces where you want to use Dynamic Credentials.
