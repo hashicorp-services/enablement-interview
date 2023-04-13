@@ -15,14 +15,17 @@ Repo to facilitate the presentation and technical exercise for the Enablement En
 
 2. Create a new branch to work on.
 
-3. Choose one topic below:
+3. Choose a topic below or create your own:
+   - Vault: Best Practices for Namespaces - when to configure root authentication or child namespaces
+   - Vault: How to Manage Child Namespaces and Permissions
+   - Vault: Dynamic Credentials with AWS Provider
+   - Packer and Terraform Integration
+   - Consul: Service Catalog - what problem does it solve and how is it used? 
+   - Consul: Service Mesh - what problem does it solve? How is service mesh related to service catalog related?
+   - Nomad: Important considerations to make when adapting an application for orchestration
+   - Nomad: Difference between scalability and elasticity?
 
-   - [Terraform: Dynamic Credentials with AWS Provider](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/dynamic-provider-credentials/aws-configuration)
-   - [Terraform: Output Values](https://developer.hashicorp.com/terraform/language/values/outputs)
-   - [Consul: Automated Backups](https://developer.hashicorp.com/consul/docs/enterprise/backups)
-   - [Consul: Health Checks](https://developer.hashicorp.com/consul/docs/discovery/checks)
-   - [Vault: Token Response Wrapping](https://developer.hashicorp.com/vault/docs/concepts/response-wrapping)
-   - [Vault Password Policy](https://developer.hashicorp.com/vault/docs/concepts/password-policies)
+Bonus points for a presentation that covers two HashiCorp products working together.
 
 4. We have provided an [index.html](index.html), and 3 markdown files ([title.md](title.md), [slide1.md](slide1.md), [slide2.md](slide2.md).) These contain some examples of markdown for classes, images, presenter notes, etc. Create a presentation with 3-7 slides for the topic you chose above. Please make you have at least one example of:
 
