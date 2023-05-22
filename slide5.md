@@ -36,4 +36,4 @@ This will build an image and print the artifacts generated to the console. In ou
 
 Note: For the above example to work, you have to export the env variables aws_access_key and aws_secret_key before running build. Also, ensure that given IAM user credentials have sufficient permissions to provision EC2.
 
-
+---

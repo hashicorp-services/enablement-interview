@@ -51,4 +51,4 @@ Builders: It is responsible for building the image. It does so by creating a mac
 Provisioners: It is used to define steps that need to be executed on top of the base image. We can easily integrate a shell script, ansible-playbook or a chef cookbook for configuring a required application in the AMI. 
 In our example, Inline shell commands like sleep, apt-get update, apt-get install -y docker.io is used
 
-
+---

@@ -11,3 +11,5 @@ name: slide1
 This slide uses the `img-right` class and displays an image
 
 ???
+
+---

@@ -50,4 +50,4 @@ TF_VAR_KEY_NAME=<YOUR_KEY_NAME> \
 terraform init
 terraform apply
 
-
+---

@@ -27,4 +27,4 @@ The goal here is to:
 - Build the image using that template. We will get an AMI ID for the image that we can reference in terraform
 - Reference our image in the terraform configuration file, and provision an EC2 instance with it
 
-
+---
