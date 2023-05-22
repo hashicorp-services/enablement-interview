@@ -4,7 +4,7 @@ background-image: url(../../assets/images/backgrounds/HashiCorp-Content-bkg.png)
 background-size: cover
 name: slide1
 
-## Slide 1
+## Integration Overview
 
 ![scale:50%](./assets/logos/logo_terraform.png)
 
