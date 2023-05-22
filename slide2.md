@@ -9,10 +9,8 @@ name: slide2
 Here's an example of incremental text (hit left to progress):
 
 - List Item 1
---
 
 - List Item 2
---
 
 - List Item 3
 
