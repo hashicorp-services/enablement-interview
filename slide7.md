@@ -2,7 +2,7 @@ layout: true
 class: img-right
 background-image: url(../../assets/images/backgrounds/HashiCorp-Content-bkg.png)
 background-size: cover
-name: slide2
+name: slide7
 
 ## Conclusion
 
