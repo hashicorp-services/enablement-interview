@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-           <title>Enablement Engineer Presentation</title>
-           <link rel="shortcut icon" type="image/jpg" href="./assets/favicon.ico" />
-           <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-           <link rel="stylesheet" type="text/css" href="./assets/css/adirondack.css">
-           <link rel="stylesheet" type="text/css" href="./assets/css/apron.css">
-           <link rel="stylesheet" type="text/css" href="./assets/css/descartes.css">
-           <link rel="stylesheet" type="text/css" href="./assets/css/hashicorp.css">
-           <link rel="stylesheet" type="text/css" href="./assets/css/all.css">
-           <link rel="stylesheet" type="text/css" href="./assets/css/hashicorp-remark.css">
-           <link rel="stylesheet" type="text/css" href="./assets/css/terminal.css">
-           <script src="./assets/js/jquery.min.js"></script>
-           <style type="text/css">
-               .remark-container {
-                   background-color: #000000;
-               }
-           </style>
+<html>
 
-<!--
+<head>
+    <title>Enablement Engineer Presentation</title>
+    <link rel="shortcut icon" type="image/jpg" href="./assets/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/adirondack.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/apron.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/descartes.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/hashicorp.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/hashicorp-remark.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/terminal.css">
+    <script src="./assets/js/jquery.min.js"></script>
+    <style type="text/css">
+        .remark-container {
+            background-color: #000000;
+        }
+    </style>
+
+    <!--
 HashiCorp Colors
 Vagrant    #1563FF
 Packer     #00ACFF
@@ -28,38 +29,40 @@ Nomad      #00BC7F
 Consul     #CA2171
 -->
 </head>
+
 <body>
     <script src="https://remarkjs.com/downloads/remark-0.14.0.min.js" type="text/javascript"></script>
     <script src="./assets/js/terraform.js" type="text/javascript"></script>
     <script>
-       remark.macros.scale = function(percentage) {
-           var url = this;
-           return '<img src="' + url + '" style="width: ' + percentage + '" />';
-       };
-        remark.macros.img = function(altText, width) {
+        remark.macros.scale = function (percentage) {
+            var url = this;
+            return '<img src="' + url + '" style="width: ' + percentage + '" />';
+        };
+        remark.macros.img = function (altText, width) {
             var url = this;
             return '<figure><img alt="' + altText + '" src="' + url + '" style="width: ' + width + '" />\n<figcaption>' + altText + '</figcaption></figure>';
         };
-    // Place all of your files here
-       sourceUrls = [
-           'title.md',
-           'slide1.md',
-           'slide2.md',
-           ]
+        // Place all of your files here
+        sourceUrls = [
+            'title.md',
+            'slide1.md',
+            'slide2.md',
+            'slide3.md'
+        ]
 
-       var xmlhttp = new XMLHttpRequest();
-       var source = ""
-       for (var i = 0; i < sourceUrls.length; i++) {
-           xmlhttp.open('GET', sourceUrls[i], false);
-           xmlhttp.send();
-           source += xmlhttp.responseText;
-           // Files shouldn't have --- at the head or foot
-           // It is added automatically here
-           if (i + 1 < sourceUrls.length) {
-             source += "---"
-           }
-       };
-       var slideshow = remark.create({
+        var xmlhttp = new XMLHttpRequest();
+        var source = ""
+        for (var i = 0; i < sourceUrls.length; i++) {
+            xmlhttp.open('GET', sourceUrls[i], false);
+            xmlhttp.send();
+            source += xmlhttp.responseText;
+            // Files shouldn't have --- at the head or foot
+            // It is added automatically here
+            if (i + 1 < sourceUrls.length) {
+                source += "---"
+            }
+        };
+        var slideshow = remark.create({
             ratio: '16:9',
             highlightLines: 'true',
             highlightSpans: 'true',
@@ -85,4 +88,5 @@ Consul     #CA2171
         }
     </script>
 </body>
+
 </html>
