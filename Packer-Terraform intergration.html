@@ -15,12 +15,14 @@
         font-weight: normal;
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-    <style>
+   <style>
+   .theBlackBackground {background-color:#000;color: white;}   
+    </style>
   </head>
   <body>
     <textarea id="source">
 
-class: center, middle
+class: center, middle, theBlackBackground
       
 # Packer/Terraform Intergration
 
@@ -29,34 +31,27 @@ class: center, middle
 Notes for the _first_ slide!
 
 ---
+
 class: center, middle
+      
 # Agenda
 
 1. Unified Workflow with Terraform Cloud
-2. Terraform Cloud + HCP Packer Working together
-3. Integrated build & provisioning workflow
-
+2. Terraform Cloud and HCP Packer Working together
+3. integrated build & provisioning workflow
+      
 ???
 
 Packer is HashiCorp's tool for creating machine images from source configuration. 
 You can configure Packer images with an operating system and software for your specific use-case.
 Terraform configuration for a compute instance can use a Packer image to provision your instance without manual configuration. 
 Terraform Cloud and HCP Packer is a great “better together” story
-
- [NOTE]: Note that you need active internet connection to access remark.js script file
+      
+[NOTE]: Note that you need active internet connection to access remark.js script file
+      
 ---
 
-# Terraform Cloud + HCP Packer Working Together
-
-  HCP Packer                           Terraform Cloud
-● Build images                          ● Fetch images (Data source)
-● Publish metadata                      ● Provision infrastructure
-● Release via channels                   ● Validate image status (Run tasks, continuous validation)
-● Revoke and rollback
-● View ancestry & history
-                                  
-???
-
+# Introduction
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
