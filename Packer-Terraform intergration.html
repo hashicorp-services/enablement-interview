@@ -72,12 +72,10 @@ So we get the whole image lifecycle with Packer and HCP Packer
       
 # Terraform Cloud and HCP Packer Working Together
       
-   HCP Packer                                                                     
-● Build images             
-● Publish metadata         
-● Release via channels     
-● Revoke and rollback  
-● View ancestry & history 
+   Terraform Cloud                                                                    
+● Fetch images via Data Source            
+● Provision infrastructure         
+● Validate image status with Run tasks and Continous validation     
 
 ???
 
@@ -85,8 +83,7 @@ Terraform will fetch these images using the data source in the HCP Provider that
 Terraform will provision infrastructure based on these images
 Terraform Cloud and HCP Packer intergtate through "RunTask" and Continous validation to ensure correct image is being provisioned   
 
-
-  ---
+ ---
 
   
     </textarea>
