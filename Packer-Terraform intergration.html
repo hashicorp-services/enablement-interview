@@ -90,15 +90,14 @@ Continous validation to ensure correct image is being provisioned.
 
 # Build your Packer image
       
-'''hcl
-      
+``hcl
 variable "region" {
-  type    = string
-  default = "us-east-1"
+type    = string
+default = "us-east-1"
 }
 
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
-'''
+````
       
     </textarea>
     <script type="text/javascript">
