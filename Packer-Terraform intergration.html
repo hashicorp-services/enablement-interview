@@ -92,12 +92,12 @@ Continous validation to ensure correct image is being provisioned.
 
 Code:
 
-,,,variable "region" {
+variable "region" {
   type    = string
   default = "us-east-1"
 }
 
-locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") },,,
+locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
       
     </textarea>
