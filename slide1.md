@@ -12,4 +12,4 @@ This slide uses the `img-right` class and displays an image
 
 ???
 
----
+This is a presenter note
