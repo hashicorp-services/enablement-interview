@@ -5,9 +5,9 @@ OS="$(uname)"
 
 # Set the environment variable
 if [[ "${OS}" == "Linux" ]]; then
- echo 'export GITHUB_USERNAME=jcchoi' >> /root/.bash_profile
+ echo 'export GITHUB_USERNAME=<your_username>' >> /root/.bash_profile
 elif [[ "${OS}" == "Darwin" ]]; then
- echo 'export GITHUB_USERNAME=jcchoi' >> /Users/jcchoi/.bash_profile
+ echo 'export GITHUB_USERNAME=<your_username>' >> /Users/<your_username>/.bash_profile
 else
  echo "Unknown OS"
  exit 1
