@@ -1,10 +1,10 @@
 layout: true
-class: img-right
+class: img-caption
 background-image: url(../../assets/images/backgrounds/HashiCorp-Content-bkg.png)
 background-size: cover
-name: slide1
+name: slide3
 
-## Packer and Terraform
+## Secure Deployment through Packer and Terraform Collaboration
 
 ![scale:50%](./assets/logos/logo_terraform.png)
 
