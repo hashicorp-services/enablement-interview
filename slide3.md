@@ -8,12 +8,7 @@ name: slide3
 
 ![scale:50%](./assets/logos/logo_terraform.png)
 
-Developed by HashiCorp, Packer together with Terraform stands as a powerful set of tools for automating infrastructure. 
-- Packer crafts machine images from configurations, while Terraform efficiently manages and provisions these images across environments.
-- Together, they ensure a seamless workflow for
--     image creation
--     distribution
--     deployment
+Once Packer creates secure images, Terraform seamlessly takes over, utilizing these images for automated cloud instance launches. This collaboration ensures consistent and secure infrastructure deployment across various environments.
 
 ???
 
