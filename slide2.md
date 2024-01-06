@@ -4,16 +4,20 @@ background-image: url(../../assets/images/backgrounds/HashiCorp-Content-bkg.png)
 background-size: cover
 name: slide2
 
-## Slide 2
+## Efficient Image Creation with Packer
 
 Here's an example of incremental text (hit left to progress):
 
-- List Item 1
+- Packer enables secure infrastructure definition in code
 --
 
-- List Item 2
+- Swiftly generating tailored machine images encompassing operating systems, software, and specific configurations
 --
 
-- List Item 3
+- These images are securely stored and distributed for deployment across diverse environments
+--
+
+. . .
+
 
 ???
