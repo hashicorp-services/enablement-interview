@@ -1,5 +1,5 @@
 layout: true
-class: img-right
+class: compact
 background-image: url(../../assets/images/backgrounds/HashiCorp-Content-bkg.png)
 background-size: cover
 name: slide4
