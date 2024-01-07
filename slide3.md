@@ -1,5 +1,5 @@
 layout: true
-class: img-caption
+class: img-left
 background-image: url(../../assets/images/backgrounds/HashiCorp-Content-bkg.png)
 background-size: cover
 name: slide3
