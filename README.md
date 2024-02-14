@@ -50,6 +50,8 @@ disable_mlock = true
 
 - Replaces `<HOSTNAME>` value `vault-server.hashicorp.com` in config.hcl
 
+- Commit the completed script to your branch
+
 ## Additional Information
 
 ### Markdown
