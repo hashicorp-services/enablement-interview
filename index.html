@@ -1,88 +1,248 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-           <title>Enablement Engineer Presentation</title>
-           <link rel="shortcut icon" type="image/jpg" href="./assets/favicon.ico" />
-           <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-           <link rel="stylesheet" type="text/css" href="./assets/css/adirondack.css">
-           <link rel="stylesheet" type="text/css" href="./assets/css/apron.css">
-           <link rel="stylesheet" type="text/css" href="./assets/css/descartes.css">
-           <link rel="stylesheet" type="text/css" href="./assets/css/hashicorp.css">
-           <link rel="stylesheet" type="text/css" href="./assets/css/all.css">
-           <link rel="stylesheet" type="text/css" href="./assets/css/hashicorp-remark.css">
-           <link rel="stylesheet" type="text/css" href="./assets/css/terminal.css">
-           <script src="./assets/js/jquery.min.js"></script>
-           <style type="text/css">
-               .remark-container {
-                   background-color: #000000;
-               }
-           </style>
-
-<!--
-HashiCorp Colors
-Vagrant    #1563FF
-Packer     #00ACFF
-Terraform  #623CE4
-Vault      #000000
-Nomad      #00BC7F
-Consul     #CA2171
--->
-</head>
-<body>
-    <script src="https://remarkjs.com/downloads/remark-0.14.0.min.js" type="text/javascript"></script>
+<html>
+  <head>
+    <title>Infrastructure Provisioning using Dynamic Credentials</title>
+    <link href="favicon.png" rel="icon" type="image/png"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" type="image/jpg" href="./assets/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/adirondack.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/apron.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/descartes.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/hashicorp.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/hashicorp-remark.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/terminal.css">
+    <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/terraform.js" type="text/javascript"></script>
-    <script>
-       remark.macros.scale = function(percentage) {
-           var url = this;
-           return '<img src="' + url + '" style="width: ' + percentage + '" />';
-       };
-        remark.macros.img = function(altText, width) {
-            var url = this;
-            return '<figure><img alt="' + altText + '" src="' + url + '" style="width: ' + width + '" />\n<figcaption>' + altText + '</figcaption></figure>';
-        };
-    // Place all of your files here
-       sourceUrls = [
-           'title.md',
-           'slide1.md',
-           'slide2.md',
-           ]
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-       var xmlhttp = new XMLHttpRequest();
-       var source = ""
-       for (var i = 0; i < sourceUrls.length; i++) {
-           xmlhttp.open('GET', sourceUrls[i], false);
-           xmlhttp.send();
-           source += xmlhttp.responseText;
-           // Files shouldn't have --- at the head or foot
-           // It is added automatically here
-           if (i + 1 < sourceUrls.length) {
-             source += "---"
-           }
-       };
-       var slideshow = remark.create({
-            ratio: '16:9',
-            highlightLines: 'true',
-            highlightSpans: 'true',
-            highlightStyle: 'monokai',
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
 
-            navigation: {
-                // Enable or disable navigating using scroll
-                // Default: true
-                // Alternatives: false
-                scroll: false,
-            },
+class: smokescreen, no-footer, center, title
+background-image: url(./assets/images/slide_templates/Academy-title.png)
+count: true
+      
+## Infrastructure Provisioning using Dynamic Credentials (Terraform Cloud and Vault)
 
-            // highlightStyle: 'solarized-dark', // This requires the highlight .remark-code-line-highlighted and .remark-code-span-highlighted style classes to match color scheme
-            source: source
-        });
+???
+Notes for title page
 
-        // Turn code blocks (actually, any <pre> tag) into a fake terminal window with macOS-like title bar
-        // the code just injects some HTML before the <pre> tags and uses CSS magic to turn the code into a title bar
-        var pres = document.getElementsByTagName('pre')
+---
+
+class: roomy, no-footer
+name: agenda
+background-image: url(./assets/images/backgrounds/HashiCorp-Content-bkg.png)
+count: true
+
+# Agenda 
+
+- Terraform Cloud
+- Workspaces
+- Variables
+- Vault
+- Configuring Dynamic credentials with Vault
+
+???
+Discuss how Terraform Cloud works, important concepts to understand infrastructure provisioning.
+Importance of variables during infrastructure provisioning. Then discuss what is Vault and how to
+use it to configure dynamic credentials for infrastructure provisioning.
+
+---
+
+name: terraformcloud
+class: img-right, no-footer, full-bleed, compact
+background-image: url(./assets/images/backgrounds/HashiCorp-Content-bkg.png)
+
+
+# Terraform Cloud
+
+![Logo](./assets/logos/logo_terraform.png)
+
+Terraform Cloud is an infrastructure as code tool. With Terraform Cloud, you can: 
+* Manage resources through human-readable configuration files.
+* Automate resource changes
+* Collaborate on each step of infrastructure development process.
+
+???
+
+Terraform is an infrastructure as code tool that lets you define and manage infrastructure resources 
+through human-readable configuration files. Terraform Cloud builds on the features of Terraform Cloud
+by managing Terraform runs in a consistent and reliable environment.
+
+Terraform Cloud Securely stores state and secret data and can connect to version control systems so that
+you can develop your infrastructure using a workflow similar to application development.
+
+---
+
+name: workspaces-and-variables
+class: compact, no-footer, full-bleed
+background-image: url(./assets/images/backgrounds/HashiCorp-Content-bkg.png)
+
+# Workspaces
+
+Terraform Cloud manages infrastructure collections with workspaces. 
+
+* Each workspace is associated with a Terraform configuration.
+* Infrastructure provisioning is done by performing a run in each workspace.
+* Versions of configuration are maintained through VCS repositories.
+
+
+
+???
+A Terraform configuration is a complete document in the Terraform language that tells Terraform how to
+manage a given collection of infrastructure. A configuration can consist of multiple files and directories.
+
+Terraform Cloud manages infrastructure collections with workspaces instead of directories. 
+A workspace contains everything Terraform needs to manage a given collection of infrastructure, 
+and separate workspaces function like completely separate working directories.
+
+---
+name: example
+class: compact, no-footer, full-bleed
+background-image: url(./assets/images/backgrounds/HashiCorp-Content-bkg.png)
+
+## Example configuration
+
+```
+terraform {
+    required_providers {
+        aws = {
+        source  = "hashicorp/aws"
+        version = "~> 1.0.4"
+        }
+    }
+    }
+    variable "aws_region" {}
+    variable "availability_zones" {
+    description = "A list of availability zones in which to create subnets"
+    type = list(string)
+    }
+
+    provider "aws" {
+    region = var.aws_region
+    }
+```
+
+???
+Here is an example configuration with information on required cloud providers and other infrastructure 
+specific information such as availability zones and regions.
+
+
+---
+name: variables
+class: img-right, no-footer, full-bleed
+background-image: url(./assets/images/backgrounds/HashiCorp-Content-bkg.png)
+
+# Variables
+
+![scale:50%](./assets/logos/logo_terraform.png)
+
+With terraform variables, you can:
+
+* Customize configurations
+* Modify Terraform's behavior
+* Setup dynamic provider credentials
+* Store static provider credentials
+
+???
+You can set variables specifically for each workspace
+or you can create variable sets to reuse the same variables across multiple workspaces.
+
+Credentials might be hard coded in source code, littered throughout configuration files 
+and configuration management tools, and stored in plaintext in version control, wikis, and 
+shared volumes. Safeguarding and ensuring that credentials aren’t leaked, or in the likelihood it is, 
+that the organization can quickly revoke access and remediate, is a complex problem to solve.
+The solution is to create automated short-lived dynamic credentials across the environments. 
+A dynamic secret is generated on demand and is unique to a client, instead of a static secret, 
+which is defined ahead of time and shared. Vault associates each dynamic secret with a lease and 
+automatically destroys the credentials when the lease expires. 
+
+Vault supports dynamic secrets with a wide range of systems and is easily extensible with plugins.
+
+
+---
+name: dynamic-credentials
+class: no-footer, full-bleed
+background-image: url(./assets/images/backgrounds/HashiCorp-Content-bkg.png)
+
+# Dynamic Provider Credentials
+
+Dynamic credentials improve your security posture by letting you provision new, temporary credentials for each run.
+
+* Unique, short-lived credentials limits the risk of compromised credentials.
+* You can configure dynamic credentials for AWS, Google Cloud, Azure and Vault.
+
+---
+
+name: Vault
+class: no-footer, full-bleed
+background-image: url(./assets/images/backgrounds/HashiCorp-Content-bkg.png)
+
+## Vault
+
+HashiCorp Vault is an identity-based secrets and encryption management system.
+* Provides encryption services that are gated by authentication and authorization methods to ensure secure, auditable and restricted access to secrets. 
+* Used to secure, store and protect secrets and other sensitive data using a UI, CLI, or HTTP API.
+
+???
+A secret is anything that you want to tightly control access to, such as tokens, API keys,
+passwords, encryption keys or certificates. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.
+
+---
+name: vault-backed-dynamic-credentials
+class: no-footer, full-bleed
+background-image: url(./assets/images/backgrounds/HashiCorp-Content-bkg.png)
+
+# Vault-backed Dynamic Credentials
+
+To use Vault-backed dynamic credentials:
+
+* Configure Vault's secrets engine.
+* Establish a trust relationship between Vault and Terraform Cloud.
+* Create roles and policies for the resources and workspace, the dynamic credentials can manage.
+
+???
+To use Vault-backed dynamic credentials, you must first configure Vault's secrets engine, then establish a trust relationship between Vault and Terraform Cloud. You must also create the roles and policies that define which resources and services the dynamic credentials can manage, and the Terraform Cloud workspace that will provision your resources.
+Using Vault-backed dynamic credentials in a workspace requires the following steps for each cloud platform:
+1.	Set up Dynamic Provider Credentials with the Vault Provider: You must first configure dynamic credentials with the Vault provider.
+2.	Configure the desired Secrets Engine: You must configure the desired secrets engine in your Vault instance (i.e., AWS, GCP, or Azure).
+3.	Configure Terraform Cloud Workspace: You must add specific environment variables to your workspace to tell Terraform Cloud how to authenticate to other cloud providers during runs. Each cloud platform has its own set of environment variables that are necessary to configure dynamic credentials.
+
+
+---
+
+class: smokescreen, no-footer, center, title
+background-image: url(./assets/images/slide_templates/HashiCorp-ThankYou.png)
+count: true
+      
+???
+Thank you
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+        ratio: '16:9',
+      });
+      var pres = document.getElementsByTagName('pre')
 
         for (var i = 0; i < pres.length; i++) {
             pres[i].insertAdjacentHTML('beforebegin', '<div class="terminal space shadow"><div class="top"><div class="btns"><span class="circle red"></span><span class="circle yellow"></span><span class="circle green"></span></div><div class="title">&nbsp;</div>')
         }
     </script>
-</body>
+  </body>
 </html>
